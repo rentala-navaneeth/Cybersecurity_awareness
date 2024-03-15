@@ -1,0 +1,110 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #000000;
+	font-weight: bold;
+}
+.style12 {color: #FFFF00; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1" style= " font-size: 25px; font-family: cursive;">View Cybersecurity Awareness Prediction Type Details  !!! </p>
+                            <hr>
+                            <div >
+                               <table border="5" bordercolor="white">
+
+
+                                   <tr>
+
+                                       <td bgcolor="#000000"><div align="center" class="style12"><span class="style8 style6">RID</span></div></td>
+<td bgcolor="#000000"><div align="center" class="style12"><span class="style8 style6">Education_Level</span></div></td>
+<td bgcolor="#000000"><div align="center" class="style12"><span class="style8 style6">Institution_Type</span></div></td>
+<td bgcolor="#000000"><div align="center" class="style12"><span class="style8 style6">Attack_Date</span></div></td>
+<td bgcolor="#000000"><div align="center" class="style12"><span class="style8 style6">Sex</span></div></td>
+<td bgcolor="#000000"><div align="center" class="style12"><span class="style8 style6">Age</span></div></td>
+<td bgcolor="#000000"><div align="center" class="style12"><span class="style8 style6">Device</span></div></td>
+<td bgcolor="#000000"><div align="center" class="style12"><span class="style8 style6">IT_Student</span></div></td>
+<td bgcolor="#000000"><div align="center" class="style12"><span class="style8 style6">Location</span></div></td>
+<td bgcolor="#000000"><div align="center" class="style12"><span class="style8 style6">Internet_Type</span></div></td>
+<td bgcolor="#000000"><div align="center" class="style12"><span class="style8 style6">Network_Type</span></div></td>
+<td bgcolor="#000000"><div align="center" class="style12"><span class="style8 style6">Url</span></div></td>
+<td bgcolor="#000000"><div align="center" class="style12"><span class="style8 style6">Prediction</span></div></td>
+
+
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+                          <td bgcolor="#000000" style="color:gold; font-size:20px; font-family:fantasy" >{{object.RID}}</td>
+<td bgcolor="#000000" style="color:gold; font-size:20px; font-family:fantasy; font-weight: normal;" >{{object.Education_Level}}</td>
+<td bgcolor="#000000" style="color:gold; font-size:20px; font-family:fantasy;font-weight: normal;" >{{object.Institution_Type}}</td>
+<td bgcolor="#000000" style="color:gold; font-size:20px; font-family:fantasy; font-weight: normal;" >{{object.Attack_Date}}</td>
+<td bgcolor="#000000" style="color:gold; font-size:20px; font-family:fantasy; font-weight: normal;" >{{object.Sex}}</td>
+<td bgcolor="#000000" style="color:gold; font-size:20px; font-family:fantasy; font-weight: normal;" >{{object.Age}}</td>
+<td bgcolor="#000000" style="color:gold; font-size:20px; font-family:fantasy; font-weight: normal;" >{{object.Device}}</td>
+<td bgcolor="#000000" style="color:gold; font-size:20px; font-family:fantasy; font-weight: normal;" >{{object.IT_Student}}</td>
+<td bgcolor="#000000" style="color:gold; font-size:20px; font-family:fantasy; font-weight: normal;" >{{object.Location}}</td>
+<td bgcolor="#000000" style="color:gold; font-size:20px; font-family:fantasy; font-weight: normal;" >{{object.Internet_Type}}</td>
+<td bgcolor="#000000" style="color:gold; font-size:20px; font-family:fantasy; font-weight: normal;" >{{object.Network_Type}}</td>
+<td bgcolor="#000000" style="color:gold; font-size:20px; font-family:fantasy; font-weight: normal;" >{{object.Url}}</td>
+<td bgcolor="#000000" style="color:gold; font-size:20px; font-family:fantasy; font-weight: normal;" >{{object.Prediction}}</td>
+
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

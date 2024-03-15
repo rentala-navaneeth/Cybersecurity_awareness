@@ -1,0 +1,168 @@
+{% extends 'RUser/Header.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:0px;}
+			.container{background-color:white;padding: 10px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+.py-5 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1% !important;
+}
+		.style1 {
+      background-color: black;
+      font-size: 45px;
+      padding-left: 38px;
+      padding-right: 40px;
+	color: gold;
+  display: inline-block;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 20px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1" style = "background-color: white; color: black; font-size: 18px; font-family: cursive; text-align: center; font-weight: bold;">PREDICTION OF Cybersecurity Awareness</p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="1000" align="center">
+                                  <tr>
+                                    <td width="287" height="44" bgcolor="black"><div align="center" class="style4">Enter RID </div></td>
+                                    <td width="269" style="padding-left: 1%;"><input type="text" name="rid"></td>
+                                    <td width="287" height="44" bgcolor="#000000"><div align="center" class="style4">Enter Education_Level</div></td>
+                                    <td style="padding-left: 1%;"><input type="text" name="education"></td>
+                                  </tr>
+                                  <tr>
+                                    
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#000000"><div align="center"><span class="style4">Enter Institution_Type</span></div></td>
+                                    <td style="padding-left: 1%;"><input type="text" name="itype"></td>
+                                    <td height="44" bgcolor="#000000"><div align="center"><span class="style2 style4">Enter Attack_Date Here </span></div></td>
+                                    <td style="padding-left: 1%;"><input name="adate" type="text" value=""></td>
+                                  </tr>
+                                  <tr>
+                                    
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#000000"><div align="center"><span class="style2 style4">Enter Gender </span></div></td>
+                                    <td style="padding-left: 1%;"><select name="sex">
+                                      <option>--- Select ---</option>
+                                      <option>Male</option>
+                                      <option>Female</option>
+                                    </select>
+                                    </td>
+                                    <td height="44" bgcolor="#000000"><div align="center"><span class="style2 style4">Enter Age </span></div></td>
+                                    <td style="padding-left: 1%;"><input type="text" name="age"></td>
+                                  </tr>
+                                  <tr>
+                                    
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#000000"><div align="center"><span class="style2 style4">Enter Device </span></div></td>
+                                    <td style="padding-left: 1%;"><input type="text" name="device"></td>
+                                    <td height="44" bgcolor="#000000"><div align="center"><span class="style2 style4">Enter IT Student </span></div></td>
+                                    <td style="padding-left: 1%;"><input type="text" name="itstudent"></td>
+                                  </tr>
+                                  <tr>
+                                    
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#000000"><div align="center"><span class="style2 style4">Enter Location </span></div></td>
+                                    <td style="padding-left: 1%;"><input type="text" name="location"></td>
+                                    <td height="44" bgcolor="#000000"><div align="center"><span class="style2 style4">Enter Internet Type </span></div></td>
+                                    <td style="padding-left: 1%;"><input type="text" name="inttype"></td>
+                                  </tr>
+                                  <tr>
+                                    
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#000000"><div align="center"><span class="style2 style4">Enter Network Type </span></div></td>
+                                    <td style="padding-left: 1%;"><input type="text" name="ntype"></td>
+                                    <td height="44" bgcolor="#000000"><div align="center"><span class="style2 style4">Enter URL </span></div></td>
+                                    <td style="padding-left: 1%;"><textarea name="url" cols="30" rows="8"></textarea></td>
+                                  </tr>
+                                  <tr>
+                                    
+                                  </tr>
+  <td><p>&nbsp; </p>
+          <p >
+            <input name="submit" type="submit" class="style6" style="color: red;" value="Predict" >
+        </p></td>
+  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <div>
+                              <table border="2"  style="padding-left: 20px;">
+
+                                    <tr><td width="310"  bgcolor="#FFFFFF"><div align="center"><span class="style6" style=" color: red;">Cybersecurity Awareness Type</span> :: </div></td>
+
+
+
+                                        <td bgcolor="#FFFFFF" style="color:black; font-size:23px; font-family: cursive; font-weight: bold;  " ><div align="center">{{objs}}</div></td></tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

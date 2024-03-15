@@ -1,0 +1,162 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Login</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <link rel="stylesheet"  type="text/css" href="{% static 'style.css'%} "  />
+<link rel="stylesheet"   type="text/css" href="{% static 'coin-slider.css'%}" />
+
+<script type="text/javascript" src="{% static 'cufon-yui.js'%} "></script>
+<script type="text/javascript" src="{% static 'cufon-aller.js'%}"></script>
+<script type="text/javascript" src="{% static 'jquery-1.4.2.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'script.js'%}"></script>
+<script type="text/javascript" src="{% static 'coin-slider.min.js'%}"></script>
+<style type="text/css">
+<!--
+.style5 {
+	background-color: #0d0e0d; /* You can change the color code as per your preference */
+    padding: 10px; /* Add padding for better visual appearance */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    display: inline-block; /* Ensure inline display for the background color to cover only the text */
+    color: gold; /* Set text color to white or any contrasting color */
+    font-size: 35px;
+    font-weight : bold;
+}
+.style22{
+  font-size: 24px;
+	color: #0b0b0b;}
+.style12 {font-weight: bold}
+.style13 {font-size: 24px; color: #0d0d0d; font-weight: bold; }
+.style16 {color: #0e0d0d}
+.style20 {color: #f20909; font-weight: bold; }
+.login-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: black;
+    color: gold;
+    font-size: 20px;
+    margin: 0 10px; /* Adjust the space between links */
+}
+.login-container {
+    border: 2px solid #000; /* Set the border style, width, and color */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+    padding: 20px; /* Optional: Add padding for better visual appearance */
+    display: inline-block; /* Ensure inline display for the background color to cover only the text */
+    background-color: #fff;
+    margin: auto; /* Optional: Set background color */
+  }
+  .mainbar {
+    text-align: center; /* Center the content within .mainbar */
+  }
+-->
+</style>
+</head>
+<body style = "background-color: rgb(255,229,209)">
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="menu_nav">
+        <p>&nbsp;</p>
+      </div>
+      <div class="mainbar">
+        <h1 align="center"><a href="index.html"><span class="content style5">CYBERSECURITY AWARENESS IN ONLINE EDUCATION A CASE STUDY ANALYSIS</span></a></h1>
+
+        <div class="article">
+          <h2 align="center" class="style13">Awareness on Cyberattacks and Cybersecurity by CMR TECHNICAL CAMPUS students.</h2>
+        <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-alerts">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script><link href="https://unpkg.com/soft-ui-design-system@1.0.1/assets/css/soft-design-system.min.css" rel="stylesheet" /><div class="container py-5">
+  <div class="row">
+    
+<div class="login-links">
+                    <a href="{% url 'index' %}" class="login-link">HOME</a>
+                    <a href="{% url 'login' %}" class="login-link">REMOTE USER</a>
+                    <a href="{% url 'serviceproviderlogin' %}" class="login-link">SERVICE PROVIDER</a>
+                  </div>    
+    
+
+        <img src="{% static 'img1.avif'%}" width="1297" height="450" alt="" class="fl" style="margin-top: 20px;"/>      </div>
+      <div class="clr"></div>
+      <div class="slider">
+        
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+        <div class="login-container">
+          <div class="img">
+            <div align="center"><form method="POST" role="form">
+							{% csrf_token %}
+
+						<fieldset>
+                             {% load static %}
+						<img src="{% static '/login.jpg' %}" alt="My image">
+							<p class="style22"> Login Using Your Account: </p>
+
+						<div class="form-group">
+								<input type="text" name="username"   placeholder="User Name" required>
+
+								<br />
+						      <br />
+						</div>
+						<div class="form-group">
+								<input type="password" name="password"   placeholder="Password" required>
+							</div>
+							<div>
+							  <p>
+								  <input type="submit" name="submit1"  class="btn btn-md" value="Login" style="color: black;">
+								  <br />
+							    </p>
+							</div>
+							<div>
+
+							<button>
+							<span class="style16"><strong>Are You New User </strong></span><span class="style20">!!! </span><span class="style20"><a href="{% url 'Register1' %}">REGISTER</a></span></button>
+                                
+							</div>
+ 						</fieldset>
+				</form></div>
+          </div>
+        </div>
+
+            <div class="mainbar">
+
+
+        <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-alerts">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script><link href="https://unpkg.com/soft-ui-design-system@1.0.1/assets/css/soft-design-system.min.css" rel="stylesheet" /><div class="container py-5">
+  <div class="row">
+      
+          <div class="post_content"></div>
+          <div class="clr"></div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="searchform"></div>
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="fbg"></div>
+  <div class="footer"></div>
+</div>
+<div align=center></div>
+</body>
+</html>

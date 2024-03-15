@@ -1,0 +1,78 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			input{
+			font-family:'Russo One', sans-serif;
+			font-size:15px;
+			}
+
+		.style1 {color: gold;
+		font-weight: normal;}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1" style = "color: black; font-size: 25px; font-family: cursive; text-align: center; font-weight: bold;" >VIEW ALL REMOTE USERS !!! </p>
+                            <div align = "center" class="viewclients">
+							  <table>
+								<tr>
+									<th bgcolor="#000000" style="color:gold; font-weight: normal;">USER NAME</th>
+									<th bgcolor="#000000" style="color:gold; font-weight: normal;">EMAIL</th>
+									<th bgcolor="#000000" style="color:gold; font-weight: normal;">Gender</th>
+									<th bgcolor="#000000" style="color:gold; font-weight: normal;">Address</th>
+									<th bgcolor="#000000" style="color:gold; font-weight: normal;">Mob No</th>
+									<th bgcolor="#000000" style="color:gold; font-weight: normal;">Country</th>
+									<th bgcolor="#000000" style="color:gold; font-weight: normal;">State</th>
+									<th bgcolor="#000000" style="color:gold; font-weight: normal;">City</th>
+								</tr>
+								<tr>
+								{% for o in objects %}
+									<td bgcolor="#000000" style="color:white	"><span class="style1">{{o.username}}</span></td>
+									<td bgcolor="#000000" style="color:white"><span class="style1">{{o.email}}</span></td>
+									<td bgcolor="#000000" style="color:white"><span class="style1">{{o.gender}}</span></td>
+									<td bgcolor="#000000" style="color:white"><span class="style1">{{o.address}}</span></td>
+									<td bgcolor="#000000" style="color:white"><span class="style1">{{o.phoneno}}</span></td>
+									<td bgcolor="#000000" style="color:white"><span class="style1">{{o.country}}</span></td>
+									<td bgcolor="#000000" style="color:white"><span class="style1">{{o.state}}</span></td>
+									<td bgcolor="#000000" style="color:white"><span class="style1">{{o.city}}</span></td>
+								</tr>
+								{% endfor %}
+							</table>
+
+						</div>
+					  </fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

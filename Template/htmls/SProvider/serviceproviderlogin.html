@@ -1,0 +1,136 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<title>Login</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<head>
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background: url("{% static 'simage.webp' %}");
+			background-color:#eee;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			/* Add this style for background color */
+.login-service-provider {
+    /*background-color: #007bff; /* You can change the color code as per your preference */
+    /*padding: 10px; /* Add padding for better visual appearance */
+    /*border-radius: 5px; /* Add border-radius for rounded corners */
+    /*display: inline-block; /* Ensure inline display for the background color to cover only the text */
+	font-size: 20px;
+	background-color: black;
+  color: gold; 
+  margin-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  position: relative;
+  padding: 10px 20px;
+  border: 3px solid gold;
+  border-radius: 10px;
+  box-shadow: 0 0 20 px rgba(244, 208, 63, 0.7); 
+  animation: glow 2s infinite alternate;
+}
+
+
+/* Add this style for background color to the heading */
+.page-title {
+	font-weight: normal;
+    background-color: #0d0e0d; /* You can change the color code as per your preference */
+    padding: 10px; /* Add padding for better visual appearance */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    display: inline-block; /* Ensure inline display for the background color to cover only the text */
+    color: gold; /* Set text color to white or any contrasting color */
+    font-size: 35px; /* Adjust font size as needed */
+}
+
+		.style1 {
+	color: #fbfbfb;
+	font-weight: bold;
+}
+        .style2 {
+	font-family: 'Righteous', cursive;
+	color: #FF0000;
+	font-weight: bold;
+}
+.style5 {
+	color: #FF0099;
+	font-weight: bold;
+}
+        </style>
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div>
+			<h2 class="text-center style1" id="title">
+				<span class="page-title">CYBERSECURITY AWARENESS IN ONLINE EDUCATION A CASE STUDY ANALYSIS</span>
+			</h2>
+			
+			 <p class="text-center"> <span class="style5"><small id="passwordHelpInline" class="text-muted">
+
+
+          </small></span> </p>
+ 			<hr>
+			<div class="row">
+
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+
+				<div class="col-md-5">
+ 				 		<form method="POST" role="form">
+							{% csrf_token %}
+
+						<fieldset>
+                             {% load static %}
+						<img src="{% static '/login.jpg' %}" alt="My image">
+						<p>
+							<span class="style2">
+								<span class="login-service-provider">Login Service Provider:</span>
+							</span>
+						</p>
+						
+
+							<div class="form-group">
+								<input type="text" name="username"   placeholder="User Name" required>
+							</div>
+							<div class="form-group">
+								<input type="password" name="password"   placeholder="Password" required>
+							</div>
+							<div>
+								<input type="submit" name="submit1"  class="btn btn-md" value="Login">
+							</div>
+ 						</fieldset>
+						<br><br>
+						<button class="btn btn-lg "><a href="{% url 'login' %}">User Login</a></button> 
+				</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	</body>
+
+
+</html>

@@ -1,0 +1,28 @@
+Cybersecurity Awareness in Online Education A Case Study Analysis
+
+Awareness, cyberattacks, cybersecurity, Manas University, students
+
+Cybersecurity_Awareness
+
+
+cybersecurity_awareness
+
+
+
+
+Predict_awarness
+
+RID	
+Education_Level	
+Institution_Type	
+Attack_Date	
+Sex	
+Age	
+Device	
+IT_Student	
+Location	
+Internet_Type	
+Network_Type	
+Url
+Prediction
+
